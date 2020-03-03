@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -303,7 +303,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211185973}
-  - component: {fileID: 1211185972}
   - component: {fileID: 1211185971}
   - component: {fileID: 1211185970}
   m_Layer: 0
@@ -322,12 +321,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211185969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6442dc8070ceb41f094e44de0bf87274, type: 3}
+  m_Script: {fileID: 11500000, guid: 615e6c6589cf9e54cad646b5a11e0529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showGUI: 1
-  offsetX: 0
-  offsetY: 0
+  dontDestroyOnLoad: 1
+  runInBackground: 1
+  startOnHeadless: 1
+  serverTickRate: 30
+  showDebugMessages: 0
+  offlineScene: 
+  onlineScene: 
+  transport: {fileID: 1211185971}
+  networkAddress: localhost
+  maxConnections: 4
+  authenticator: {fileID: 0}
+  playerPrefab: {fileID: 0}
+  autoCreatePlayer: 1
+  playerSpawnMethod: 0
+  spawnPrefabs: []
+  showRoomGUI: 1
+  minPlayers: 1
+  roomPlayerPrefab: {fileID: 0}
+  RoomScene: 
+  GameplayScene: 
+  roomSlots: []
+  allPlayersReady: 0
 --- !u!114 &1211185971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,40 +400,6 @@ MonoBehaviour:
   NoDelay: 1
   serverMaxMessageSize: 16384
   clientMaxMessageSize: 16384
---- !u!114 &1211185972
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211185969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c96e6dd99826849ab1431f94547141, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
-  runInBackground: 1
-  startOnHeadless: 1
-  serverTickRate: 30
-  showDebugMessages: 0
-  offlineScene: 
-  onlineScene: 
-  transport: {fileID: 1211185971}
-  networkAddress: localhost
-  maxConnections: 4
-  authenticator: {fileID: 0}
-  playerPrefab: {fileID: 0}
-  autoCreatePlayer: 1
-  playerSpawnMethod: 0
-  spawnPrefabs: []
-  showRoomGUI: 1
-  minPlayers: 1
-  roomPlayerPrefab: {fileID: 0}
-  RoomScene: 
-  GameplayScene: 
-  roomSlots: []
-  allPlayersReady: 0
 --- !u!4 &1211185973
 Transform:
   m_ObjectHideFlags: 0
